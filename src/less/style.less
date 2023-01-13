@@ -58,7 +58,8 @@ button, input, a, textarea {
 	}
 }
 .button {
-	padding: 1rem 2rem;
+	vertical-align: middle;
+	padding: 2rem 2rem;
 	border-radius: 8px;
 	font-size: 1.2rem;
 	background-color: @btn-color;
@@ -94,9 +95,10 @@ button, input, a, textarea {
 	/* Кнопка заявки */
 	&-btn {
 		display: block;
-		height: 5.5rem;
+		height: 6rem;
 		width: 100%;
 		font-size: 1.6rem;
+		margin-top: 3rem;
 	}
 }
 
@@ -104,14 +106,6 @@ button, input, a, textarea {
 
 section {
 	padding: 5rem 0;
-}
-.features-header {
-	h2 {
-		.bold();
-		font-size: 3.6rem;
-	}
-	margin: 2rem 0 12rem;
-	text-align: center;
 }
 
 /* main */
@@ -210,6 +204,14 @@ section {
 
 /* Секция с преимуществами */
 .features {
+	&-header {
+		margin: 4rem 0 12rem;
+		text-align: center;
+		h2 {
+		.bold();
+		font-size: 3.6rem;
+		}
+	}
 	&-block {
 		text-align: center;
 		h3 {
@@ -227,6 +229,9 @@ section {
 			display: inline-block;
 			margin: 0 auto;
 		}
+	}
+	&-slider {
+		margin-bottom: 5rem;
 	}
 }
 .slick-active {
@@ -258,7 +263,7 @@ section {
 	background: @icon-color url(../img/prices/pices-bg.jpg) center;
 	padding: 5rem 0;
 	&-header {
-		margin-bottom: 5rem;
+		margin: 4rem 0 5rem;
 		text-align: center;
 		color: @light;
 		h2 {
@@ -271,9 +276,12 @@ section {
 	}
 	&-header-btn {
 		margin-top: 2.5rem;
-		font-size: 1.5rem;
+		padding: 1.8rem 3.5rem;
+		font-size: 1.6rem;
 	}
 	&-button {
+		margin-top: 3rem;
+		margin-right: 2rem;
 		text-align: right;
 	}
 	p {
@@ -282,11 +290,13 @@ section {
 	}
 	/* Карточки */
 	&-block {
-		padding: 0.5rem 3rem 3rem;
+		padding: 1rem 3rem 3rem;
 		min-height: 50rem;
+		max-width: 35rem;
 		background: @light;
 		box-shadow: 7px 12px 21px 0px rgba(0,0,0,0.17);
 		text-align: center;
+		margin: 0 auto;
 		h4 {
 			margin: 2.5rem 0;
 			font-size: 1.9rem;
@@ -344,7 +354,7 @@ section {
 	background: url(../img/feedback/feedback-bg.jpg) no-repeat center;
 	background-size: cover;
 	&-header {
-		margin: 2rem 0 8rem 0;
+		margin: 4rem 0 8rem 0;
 		text-align: center;
 		h2 {
 			font-size: 3.6rem;
@@ -390,6 +400,7 @@ section {
 		padding: 5.5rem 6rem;
 		box-shadow: 6px 12px 18px 0px rgba(0,0,0,0.11);
 		background-color: @light;
+		margin: 0 3rem;
 		p {
 			font-size: 1.5rem;
 			margin-bottom: 1.5rem;
@@ -456,7 +467,7 @@ section {
 	background-size: 170rem;
 	&-header {
 		text-align: center;
-		margin-bottom: 5rem;
+		margin: 4rem 0 5rem;
 		h2 {
 			font-size: 3.6rem;
 			.bold();
@@ -465,6 +476,7 @@ section {
 	}
 	&-block {
 		min-height: 27rem;
+		padding: 0 4rem;
 	}
 	h3 {
 		font-size: 2.2rem;
@@ -482,7 +494,7 @@ section {
 	background-color: @bg-light;
 	&-header {
 		text-align: center;
-		margin-bottom: 10rem;
+		margin: 4rem 0 10rem;
 		h2 {
 			.bold();
 			font-size: 4.8rem;
@@ -525,8 +537,211 @@ section {
 	}
 }
 .row-item {
-	padding-left: 1rem;
-	padding-right: 1rem;
+	padding: 0 2rem;
+}
+
+/* Проблемы и опасения */
+.problems {
+	position: relative;
+	&-header {
+		text-align: center;
+		margin: 4rem 0 10rem;
+		h2 {
+			.bold();
+			font-size: 3.6rem;
+		}
+	}
+	&-list {
+		border: 4px solid;
+		padding: 3rem 1rem 0 3rem;
+		min-height: 35rem;
+		min-width: 47rem;
+		margin-bottom: 2rem;
+		h4 {
+			.bold();
+			font-size: 2.1rem;
+		}
+		&_bad {
+			border-color: #e0e0e0;
+			h4 {
+				opacity: 0.5
+			}
+			li {
+				margin-bottom: 5rem;
+				&:before {
+					background: url(../img/problems/x.png) no-repeat;
+				}
+			}
+		}
+		&_good {
+			border-color: #479d2e;
+			li {
+				margin-bottom: 4rem;
+				&:before {
+					background: url(../img/problems/check.png) no-repeat;
+				}
+			}
+		}
+		ul {
+			padding: 2rem 0 0 1.2rem;
+			margin-bottom: 0;
+			list-style: none;
+			li {
+				font-size: 1.5rem;
+				line-height: 1.1;
+				position: relative;
+				padding-left: 3.5rem;
+				&:before {
+				position: absolute;
+				top: 0;
+				left: 0;
+				content: '';
+				width: 3rem;
+				height: 3rem;
+				}
+			}
+		}
+	}
+	&-women {
+		position: absolute;
+		bottom: -6rem;
+		left: 50%;
+		width: 23rem;
+		margin-left: -13rem;
+	}
+}
+
+/* Материалы */
+.materials {
+	position: relative;
+	background: @light url(../img/materials/materials-bg.jpg) center no-repeat;
+	&-header {
+		text-align: center;
+		margin: 4rem 0 10rem;
+		h2 {
+			.bold();
+			font-size: 3.6rem;
+			margin-bottom: 4rem;
+		}
+		p {
+			font-size: 1.9rem;
+		}
+	}
+	&-slider {
+		p {
+			min-height: 5rem;
+		}
+	}
+	img {
+		display: block;
+		margin: 0 auto;
+	}
+	&-sertificate {
+			color: @icon-color;
+			border-bottom: 1px dotted @icon-color;
+			&:hover {
+				color: darken(@icon-color, 10%);
+			}
+	}
+	&-link {
+		color: @icon-color;
+		border-bottom: 1px dotted @icon-color;
+		&:hover {
+			color: darken(@icon-color, 10%);
+		}
+	}
+	&-offer {
+		text-align: center;
+		font-size: 2rem;
+		margin-top: 7rem;
+
+	}
+}
+
+/* Как мы работаем (tour) */
+.tour {
+	background: @light url(../img/tour/tour-bg.jpg) center no-repeat;
+	background-size: cover;
+	&-subtitle {
+		font-size: 2.2rem;
+	}
+}
+
+/* Дополнительные услуги */
+.add-services {
+	background: #286b0a;
+	p {
+		margin: 4rem 0 6rem 0;
+	}
+	&-block {
+		background: none;
+		box-shadow: none;
+		min-height: 38rem;
+		padding: 0;
+		text-align: center;
+		img {
+			display: inline-block;
+			margin-bottom: 1rem;
+		}
+		h4 {
+			color: @light;
+			margin: 2.5rem 0;
+			font-size: 1.9rem;
+			.bold();
+		}
+	}
+}
+
+/* Контакты */
+.contacts {
+	background: @light url(../img/contacts/contacts-bg.jpg) center no-repeat;
+	background-size: cover;
+	h2 {
+		.bold();
+		font-size: 3.6rem;
+		margin-bottom: 6rem;
+	}
+	p {
+		font-size: 1.8rem;
+		line-height: 1.5;
+		margin: 3rem 0;
+	}
+	&-link {
+		display: inline-block;
+		padding-bottom: 0;
+		border-bottom: 1px solid @br-input;
+		color: @text;
+		&:hover {
+			color: lighten(@text, 30%);
+		}
+	}
+	&-form {
+		margin-top: 3rem;
+		h3 {
+			font-size: 1.8rem;
+			margin-bottom: 4rem;
+			margin-top: 1rem;
+		}
+		input {
+			margin-bottom: 2.5rem;
+		}
+	}
+}
+
+/* Оформление подвала (footer) */
+.footer {
+	padding: 1.5rem 0 0 0;
+	&-contacts {
+		text-align: center;
+		font-size: 1.7rem;
+	}
+	.design {
+		text-align: right;
+		p {
+			font-size: 1.1rem;
+			margin: 0;
+		}
+	}
 }
 
 /* Оформление модальных окон */
@@ -581,7 +796,21 @@ section {
 			margin-bottom: 6rem;
 		}
 	}
-
+	.problems {
+		&-list {
+			min-height: 45rem;
+			min-width: 40rem;
+			&_bad {
+				li {
+					margin-bottom: 6.5rem;
+				}
+			}
+		}
+		&-women {
+			bottom: 0;
+			margin-left: -10rem;
+		}
+	}
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -592,6 +821,11 @@ section {
 	  &-list {
 	  	min-height: 15rem;
 	  }
+	}
+	.add-services {
+		&-block img {
+			max-width: 90%;
+		}
 	}
 }
 
@@ -632,6 +866,18 @@ section {
 		label {
 			transform: translate(-50%, -50%)
 		}
+	}
+	.problems {
+		&-list {
+			min-height: auto;
+		}
+		&-women {
+			display: none;
+		}
+	}
+	.tour {
+		background: @light url(../img/tour/tour-bg-mb.jpg) center repeat;
+		background-size: cover;
 	}
 }
 

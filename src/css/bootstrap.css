@@ -1601,6 +1601,11 @@ pre code {
     width: 1170px;
   }
 }
+@media (min-width: 1300px) {
+  .container {
+    width: 1250px;
+  }
+}
 .container-fluid {
   padding-right: 15px;
   padding-left: 15px;
@@ -5301,7 +5306,6 @@ a.thumbnail.active {
 .media-right,
 .media-body {
   display: table-cell;
-  vertical-align: top;
 }
 .media-middle {
   vertical-align: middle;
